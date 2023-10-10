@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0E0E"
+    android:backgroundTint="#151515"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/barrasup"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#910E0E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="BottomAppBar,VisualLintBottomAppBar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barramed"
+        android:layout_width="370dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toTopOf="@+id/barrainf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrasup"
+        app:layout_constraintVertical_bias="0.403">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,ImageContrastCheck"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/USER"
+                android:layout_width="200dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="36dp"
+                android:text="USERPRUEBA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/avatar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TableLayout
+                android:id="@+id/contenido"
+                android:layout_width="298dp"
+                android:layout_height="334dp"
+                android:background="#DD9E9E"
+                android:backgroundTint="#794C4444"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatar">
+
+                <TableRow
+                    android:id="@+id/tablasub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#171616"
+                    tools:ignore="UselessLeaf" />
+
+            </TableLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/barrainf"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        app:backgroundTint="#910E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="BottomAppBar,VisualLintBottomAppBar" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/buscador"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/barrasup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrasup" />
+
+    <SearchView
+        android:id="@+id/busqueda"
+        android:layout_width="43dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buscador"
+        app:layout_constraintStart_toStartOf="@+id/buscador"
+        app:layout_constraintTop_toTopOf="@+id/buscador"
+        tools:ignore="MissingConstraints" />
+
+    <RatingBar
+        android:id="@+id/vida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#F6F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/barrainf"
+        app:layout_constraintStart_toStartOf="@+id/barrainf"
+        app:layout_constraintTop_toTopOf="@+id/barrainf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
